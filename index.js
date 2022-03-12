@@ -84,13 +84,10 @@ inquirer.prompt([
                       </div>
                       
                       <div class="card-deck justify-content-center">
-                        <div class="row d-flex">
-                          <div class="col-sm" id="populate">
-
-                                
-                          </div>
+                        <div class="row row-cols-2 d-flex" id="populate">                    
+                       
                         </div>
-                       </div>
+                      </div>
 
                     </body>`
 
