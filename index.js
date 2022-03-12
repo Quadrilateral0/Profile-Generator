@@ -46,9 +46,6 @@ inquirer.prompt([
         type: "confirm",
         name: "teamadd",
         message: "Do you have another team member to add?",
-        when(answer) {
-            return answer.teamadd === true;
-        }
     },
 ])
 
