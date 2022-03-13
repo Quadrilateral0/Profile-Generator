@@ -53,6 +53,17 @@ inquirer.prompt([
         }
     },
     {
+        type: "input",
+        name: "office",
+        message: "What is the team member's office number?",
+        validate(answer) {
+            if (!answer) {
+                return "You must provide the team member's office number before continuing."
+            }
+            return true
+        }
+    },
+    {
         type: "confirm",
         name: "teamadd",
         message: "Do you have another team member to add?",
@@ -106,7 +117,7 @@ populate.append(
         <div class="card-body">
             <h5 class="card-title">${data.name}</h5>
             <h6 class="card-subtitle">${data.role}</h6>
-            <p class="card-text">${data.id}</p>
+            <p class="card-text">ID#: ${data.id}</p>
             <p class="card-text">Email: <a href="mailto:${data.email}?subject=[Hello!]">${data.email}</a></p>
             <a href="https://github.com/${data.github}" target="_blank" class="btn btn-primary">GitHub</a>
         </div>
